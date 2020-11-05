@@ -1,0 +1,98 @@
+---
+yaml_version: 3
+pkg_version: 1.0.0
+pkg_vendor: RealThread
+pkg_type: Board_Support_Packages
+board:
+  name: STM32L475-ST-DISCOVERY
+  version: Rev.A
+  vendor: STMicroelectronics
+  description_zh: STM32L475-ST-DISCOVERY Kit 开发板用于物联网开发，允许用户直接连接到云服务器开发应用程序。
+  description_en: The STM32L475-ST-DISCOVERY kit for IoT node allows users to develop applications with direct connection to cloud servers.
+  small_image: documents/images/board_small.png
+  large_image: documents/images/board_large.png
+  sale_contact_cn: https://www.stmcu.com.cn/
+  sale_contact_global: https://www.st.com/content/st_com/en.html
+  buy_url_cn: https://detail.tmall.com/item.htm?spm=a1z10.3-b-s.w4011-19008516740.17.12fd79e7iSbEFD&id=603276083863&rn=e137f3677469a76b234c5105807daead&abbucket=15
+  buy_url_global: https://estore.st.com/en/b-l475e-iot01a1-cpn.html
+  price_cn: 455.50 CNY
+  price_global: 52.41 USD
+  debugger: ST-LINK
+  debug_interface: SWD
+  emulator_machine: ''
+chip:
+  device_vendor: STMicroelectronics
+  family_name: STM32
+  series_name: STM32L4
+  sub_series_name: STM32L475
+  chip_name: STM32L475VETx
+  rx_name: PA10
+  tx_name: PA9
+  clock_source: HSE
+  source_freq: '8000000'
+  target_freq: '80000000'
+  uart_name: UART1
+docs:
+- file: documents/manuals/DM00347848.pdf
+  title: Reference manual
+  category: manual
+- file: documents/sheet/STM32L475xx Datasheet.pdf
+  title: STM32L475xx Datasheet
+  category: sheet
+features:
+- On-board ST-LINK/V2.1
+- USB OTG (Full speed) with micro-AB Connector
+- Bluetooth module
+- Wi-Fi module
+- 8 MByte QuadSPI Flash
+- ST MEMS 3-axis accelerometer (LSM6DSL)
+- ST MEMS gyroscope (LSM6DSL)
+- ST MEMS magnetometer (LIS3MDL)
+- ST MEMS barometer (LPS22HB)
+- ST MEMS humidity and temperature (HTS221)
+- Digital microphone mems (MP34DT01)
+- RS-232 serial interface
+- Two Push-buttons
+- User LED(2xGreen/Yellow/Blue)
+features_zh:
+- 板载仿真器 ST-LINK/V2.1
+- USB OTG(全速)，micro-AB 连接器
+- 蓝牙模块
+- WIFI 模块
+- 8 MByte QuadSPI Flash
+- ST MEMS 三轴加速度计 (LSM6DSL)
+- ST MEMS 陀螺仪 (LSM6DSL)
+- ST MEMS 磁力计 (LIS3MDL)
+- ST MEMS 气压计 (LPS22HB)
+- ST MEMS 温湿度传感器 (HTS221)
+- 数字麦克风
+- RS-232 串行接口
+- 2 个按钮
+- 4 个用户 LED
+template_projects:
+- project_name: stm32l475_st_discovery_blink_led
+  project_description: creat this peoject if user choose rt-thread project
+  project_type: rt-thread|@full|@latest
+  builtin_files:
+  - source_path_offset: default_project_0
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files:
+  - files_and_folders:
+    - components
+    - include
+    - libcpu/arm
+    - libcpu/Kconfig
+    - libcpu/SConscript
+    - src
+    - tools
+    - Kconfig
+    - LICENSE
+    package_name: RT-Thread
+    package_type: RT-Thread_Source_Code
+    package_vendor: ''
+    package_version: latest
+    source_path_offset: rt-thread
+    target_path_offset: rt-thread
+example_projects: []
