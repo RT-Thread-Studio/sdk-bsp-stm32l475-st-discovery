@@ -24,6 +24,5 @@
     <nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
     <nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
   </natures>
-  <name>stm32l475-st-discovery</name>
   <linkedResources />
 </projectDescription>
